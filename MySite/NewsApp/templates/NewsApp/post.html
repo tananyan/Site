@@ -1,0 +1,35 @@
+{% extends "MainApp/wrapper.html" %}
+
+{% block content %}
+
+    <h2 class="text-info" style="
+        font-family:'Calibri Light';
+        color: #ffffff;
+        ">{{ articles.title }}</h2>
+    <hr>
+
+    <p>
+        <div class="row">
+            <a href="#" class="thumbnail">
+                <img data-src="{{ articles.image.url }}" alt="...">
+            </a>
+        </div>
+    </p>
+
+    <hr>
+    <p>
+        <div style="
+            font-family: 'Calibri Light' ;
+            color: #ffffff;
+            text-align: justify;
+        ">{{ articles.post|safe|linebreaks }}</div>
+    </p>
+
+    <hr>
+    <h5 class="text-info" style="
+        font-family:'Calibri Light';
+        color: #ffffff;
+        text-align: right;
+        "> Опубликовано: {{ articles.date|date:"Y-m-d в H:i:s" }}</h5>
+
+{% endblock %}

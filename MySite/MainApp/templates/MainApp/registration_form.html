@@ -1,0 +1,47 @@
+{% extends "MainApp/wrapper.html" %}
+
+{% block content %}
+
+    <form>
+        <div class="title">Регистрация</div>
+        <div class="s-field">
+            <div class="text-wrapper">
+                <input type="email" value="" tabindex="1" placeholder="E-mail" name="email" autofocus="" autocomplete="off" data-required="true" data-validate_url="/ajax/check_availability/email/">
+
+                <div class="icon_email"></div>
+            </div>
+        </div>
+
+        <div class="s-field ">
+            <div class="text-wrapper">
+                <input type="text" value="" tabindex="2" placeholder="Никнейм" name="login" autocomplete="off" data-required="true" data-validate_url="/ajax/check_availability/login/">
+
+                <div class="icon_username"></div>
+            </div>
+        </div>
+
+        <div class="s-field">
+            <div class="text-wrapper">
+                <input type="password" value="" tabindex="3" placeholder="Пароль" name="password" autocomplete="off" data-required="true" data-validate_url="/ajax/validate/password/" data-validate_password="password2">
+
+                <div class="icon_password"></div>
+            </div>
+        </div>
+
+        <div class="s-field">
+            <div class="text-wrapper">
+                <input type="password" value="" tabindex="4" placeholder="Пароль ещё раз" name="password2" autocomplete="off" data-required="true" data-validate_url="/ajax/validate/password/" data-validate_password="password">
+
+                <div class="icon_password"></div>
+            </div>
+        </div>
+
+        <div class="s-field">
+            <div class="s-simple-checkbox">
+                <input type="checkbox" name="agree" id="agree" tabindex="5" data-required="true">
+                <label for="agree"><span class="checkbox_emulator"></span><span class="label">Я принимаю <a href="/info/agreement">пользовательское соглашение</a></span></label>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
